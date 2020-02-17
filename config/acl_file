@@ -1,0 +1,10 @@
+user subscriber
+topic read notice
+
+user publisher
+topic write notice
+
+user admin
+topic readwrite notice
+
+

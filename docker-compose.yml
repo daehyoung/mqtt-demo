@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:1.6
+    restart: always
+    ports:
+     - 1883:1883
+     - 8883:8883
+    volumes:
+     - ./config:/mosquitto/config
+     - ./data:/mosquitto/data
+     - ./log:/mosquitto/log
+     - ./certs:/mosquitto/certs
+    networks:
+     - backend
+
+networks:
+    backend:
+      driver: bridge
